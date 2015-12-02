@@ -4,9 +4,12 @@
 
 Expected file extensions that monitored include:
 
+
+
 | files: | `.avi`, `.m4v`, `.mkv`, `.mov`, `.mp4`, `.mpg`, `.mpeg`, `.qt` |
-| -- | --- |
+| --- | --- |
 | `Know` `No`'s : | symlinked paths / directories are not followed & do not work. |
+
 
 ## Installation
 ```
