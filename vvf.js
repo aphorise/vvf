@@ -151,7 +151,7 @@ function GetFilesIteratively(sDir, aFileTree, aFTreeOld)
 {
 	var exts = "-name '*.avi' -o -name '*.mp4' -o -name '*.m4v' -o -name '*.mpg'";
 	exts+= " -o -name '*.mpeg' -o -name '*.mkv' -o -name '*.mov' -o -name '*.qt'";
-	var toRun = "find "+sDir+" -type f \( " + exts + " \)"; 
+	var toRun = "find "+sDir+" -type f \\( " + exts + " \\)"; 
 	/* Iterative Method using find to get listing first then parse. */
 	var z = ps.execSync(toRun, {timeout: iTimeOut, encoding: "utf8"});
 	var theFiles = z.split("\n");

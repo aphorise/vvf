@@ -25,7 +25,7 @@ if [[ $sFFMPG == *'command not found'* ]] ; then
 		echo -e '\nAttempting to install ffmpeg for OSX via homebrew.\n' ;
 		if brew update -v && brew install ffmpeg ; then
 			echo -e '\nSUCCESS.\nInstalled ffmpeg using brew.\nLinking vvf manually.\n' ;
-			sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js ;
+			sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/. ;
 		else
 			echo -e ':-( \nERROR - could not install issue with brew / permisions?' ; exit 1 ;
 		fi ;
@@ -49,7 +49,7 @@ if [[ $sFFMPG == *'command not found'* ]] ; then
 			if wget https://github.com/FFmpeg/FFmpeg/archive/master.zip -O ffmpeg.zip && unzip ffmpeg.zip && cd FFmpeg-master && \
 				./configure --target-os=cygwin --arch=x86_64 --disable-schannel && \
 				make -j $(nproc) && make install && cd .. && rm -rf FFmpeg-master && rm ffmpeg.zip ; then
-					echo -e 'Success! :-D - installed ffmpeg.\nLinking vvf manually.\n' ; sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js ;
+					echo -e 'Success! :-D - installed ffmpeg.\nLinking vvf manually.\n' ; sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/. ;
 			else echo ':-( ISSUE: building ffpmg' ; exit 1; fi ;
 		else echo ':-( ISSUE: dependecies to make ffpmg' ; exit 1; fi ;
 	;;
@@ -64,7 +64,7 @@ if [[ $sFFMPG == *'command not found'* ]] ; then
 					echo -e '\nIssue failed! :-(\nRetry installing manually using script or otherwise.' ;
 				else
 					echo -e '\nSuccess! :-D - installed ffmpeg.\nLinking vvf manually.\n' ;
-					sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js ;
+					sudo cp vvf_index.js /bin/vvf && sudo cp vvf.js /bin/. && sudo chmod -x /bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/.;
 				fi ;
 			fi ;
 		fi ;

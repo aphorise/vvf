@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 var sMsgErrReq="ERROR "+"loading required: modules.\nDid you -> npm install <- ?\n";
 var UID; /*shorthand undefined*/
 var bTTY = Boolean(process.stdout.isTTY) || (UID !== process.env.TERM && "xterm-256color" === process.env.TERM) 
@@ -39,7 +39,7 @@ sUage+= sCDG+"|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|\n"+sCN;
 sUage+= sCDG+"|"+sCR+"    Valid"+sCG+" Video"+sCC+" Files "+sCDG+"     |\n";
 sUage+= sCDG+"|___________________________|\n"+sCN;
 sUage+= sCN+"        "+sCNB+"vvf"+sCN+" - "+sCDG+"v0.0.1\n"+sCN;
-
+console.log(process.argv);
 function showHelp(msgExtra, iExitCode)
 {
 	sUage+= "\nUsage:\n";
@@ -59,7 +59,7 @@ else
 	var sPathFilesDel = UID; 
 	var sPathScan = ".";
 
-	for (var iX=0; iX < process.argv.length; ++iX)
+	for (var iX=2; iX < process.argv.length; ++iX)
 	{
 		for (var iY=0; iY < args.length; ++iY)
 		{
