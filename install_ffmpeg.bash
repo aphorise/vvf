@@ -25,7 +25,7 @@ if [[ $sFFMPG == *'command not found'* ]] ; then
 		echo -e '\nAttempting to install ffmpeg for OSX via homebrew.\n' ;
 		if brew update -v && brew install ffmpeg ; then
 			echo -e '\nSUCCESS.\nInstalled ffmpeg using brew.\nLinking vvf manually.\n' ;
-			cp vvf_index.js /usr/local/bin/vvf && cp vvf.js /usr/local/bin/. && chmod -x /usr/local/bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/. ;
+			# cp vvf_index.js /usr/local/bin/vvf && cp vvf.js /usr/local/bin/. && chmod -x /usr/local/bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/. ;
 		else
 			echo -e ':-( \nERROR - could not install issue with brew / permisions?' ; exit 1 ;
 		fi ;
@@ -64,7 +64,7 @@ if [[ $sFFMPG == *'command not found'* ]] ; then
 					echo -e '\nIssue failed! :-(\nRetry installing manually using script or otherwise.' ;
 				else
 					echo -e '\nSuccess! :-D - installed ffmpeg.\nLinking vvf manually.\n' ;
-					cp vvf_index.js /usr/local/bin/vvf && cp vvf.js /usr/local/bin/. && chmod -x /usr/local/bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/.;
+					# cp vvf_index.js /usr/local/bin/vvf && cp vvf.js /usr/local/bin/. && chmod -x /usr/local/bin/vvf.js && cp vvf.1.gz /usr/share/man/man1/.;
 				fi ;
 			fi ;
 		fi ;

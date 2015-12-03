@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+require('../vvf_index.js')

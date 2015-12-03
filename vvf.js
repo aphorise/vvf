@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 var f_SysT1=Date.now()/1000; //start time for measuring init times
 var f_SysT2 = 0; //tick time for measuring last loop run.
 var sPROJECT="vvf v0.0.1";
