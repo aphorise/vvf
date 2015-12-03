@@ -4,9 +4,12 @@
 
 Expected file extensions that monitored include:
 
+
+
 | files: | `.avi`, `.m4v`, `.mkv`, `.mov`, `.mp4`, `.mpg`, `.mpeg`, `.qt` |
-| -- | --- |
+| --- | --- |
 | `Know` `No`'s : | symlinked paths / directories are not followed & do not work. |
+
 
 ## Installation
 ```
@@ -77,7 +80,7 @@ There are faster approximation techniques that may be used in favour of the deco
 
 For example one can obtain the acclaimed `bit` / `mbps` rate and multiply this by the total `duration` to obtain the minimum expected file size that could then be observed; the draw backs with this approach are that they would not work with `zero` padded files that maybe streamed into nor where `bit` rates may be wrong / erroneous.
 
-The current techniques used by `vvf` is also not prone to false-passes in certain cases such as those where the content is in hash-transfer (eg: `torrents`) and contains the ending segment of content but not all prior or other parts.
+The current techniques used by `vvf` at present are also prone to false-passes cases such as those where the content is in hash-transfer (eg: `torrents`) and contains the ending segment of content but not all prior or other parts.
 
 What may serve is a combination scheme of approximation with sampled frame encoding of quartiles segment ranges (upper, lower, etc) thereby reducing the probability of any files being incorrectly considered as ready.
 
