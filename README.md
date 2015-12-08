@@ -6,9 +6,12 @@ Expected file extensions that monitored include:
 
 
 
-| files: | `.avi`, `.m4v`, `.mkv`, `.mov`, `.mp4`, `.mpg`, `.mpeg`, `.qt` |
+| files: | `.3gp`, `.3gp2`, `.264`, `.amv`, `.asf`, `.avi`, `.bik`, `.dv`, `.divx`, `.f4v`, `.flv`, `.gvi`, `.m2t`, `.m2ts`, `.m2v`, `.m4v`, `.mkv`, `.mov`, `.mp2`, `.mp2v`, `.mp4`, `.mp4v`, `.mpeg`, `.mpeg2`, `.mpeg4`, `.mpg`, `.mxg`, `.mtv nsv`, `.nuv`, `.rec`, `.rm`, `.rmvb`, `.rpl`, `.ogg`, `.ogm`, `.ogv`, `.ogx`, `.ps`, `.qt`, `.swf`, `.vob`, `.webm`, `.wmv`, `.xvid`, `.wtv` |
 | --- | --- |
 | `Know` `No`'s : | symlinked paths / directories are not followed & do not work. |
+
+
+This scripts works in Debian, Linux, OSX & Windows using cygwin.
 
 
 ## Installation
@@ -85,7 +88,7 @@ The current techniques used by `vvf` at present are also prone to false-passes c
 What may serve is a combination scheme of approximation with sampled frame encoding of quartiles segment ranges (upper, lower, etc) thereby reducing the probability of any files being incorrectly considered as ready.
 
 ### Version
-0.0.1
+0.0.2
 
 
 License
