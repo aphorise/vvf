@@ -1,22 +1,32 @@
 {
 	"name": "vvf",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"license": "GPL-3.0",
 	"author": "aphorise",
-	"license": "GPLv3",
+	"contributors": [{ "name" : "Mehdi Ahmadi" , "email" : "mehdi@vigour.io", "url" : "http://#" }],
 	"description": "Lists Valid video files in a given path using ffmpeg to ensure ending of content.",
 	"main": "./vvf.js",
 	"man" : "./vvf.1.gz",
 	"bin": { "vvf": "./vvf_index.js" },
+	"files":
+	[
+		"install_ffmpeg.bash",
+		"HISTORY.md",
+		"README.md",
+		"vvf.1.gz",
+		"vvf.js",
+		"vvf_index.js"
+	],
 	"scripts":
 	{
 		"test": "echo Run: wmfs on relevant path to test. EG: ~/Movies && exit 0",
-		"install": "bash -c \"./install_ffmpeg.bash && echo 'ffmpeg ready / installed.'\"",
+		"preinstall": "bash -c \"./install_ffmpeg.bash && echo 'ffmpeg ready / installed.'\"",
 		"start": "node vvf_index.js",
-		"uninstall": "npm run-script test"
 	},
 	"keywords": [ "ffmpeg", "ffprobe", "video", "media server", "watcher", "avi", "m4v", "mp4", "mkv", "mov", "mpeg", "mpg", "qt", "node.js"],
 	"readmeFilename": "README.md",
 	"repository": { "type": "git", "url": "ssh://git@github.com:vigour-io/vvf.git" },
+	"preferGlobal": true,
 	"os" : [ "darwin", "linux", "debian", "win32" ],
 	"cpu" : [ "x64", "ia32", "!arm", "!mips" ]
 }
