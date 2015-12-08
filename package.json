@@ -21,7 +21,7 @@
 	{
 		"test": "echo Run: wmfs on relevant path to test. EG: ~/Movies && exit 0",
 		"preinstall": "bash -c \"./install_ffmpeg.bash && echo 'ffmpeg ready / installed.'\"",
-		"start": "node vvf_index.js",
+		"start": "node vvf_index.js"
 	},
 	"keywords": [ "ffmpeg", "ffprobe", "video", "media server", "watcher", "avi", "m4v", "mp4", "mkv", "mov", "mpeg", "mpg", "qt", "node.js"],
 	"readmeFilename": "README.md",
