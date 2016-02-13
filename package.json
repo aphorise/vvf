@@ -1,21 +1,21 @@
 {
 	"name": "vvf",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"license": "GPL-3.0",
 	"author": "aphorise",
 	"contributors": [{ "name" : "Mehdi Ahmadi" , "email" : "mehdi@vigour.io", "url" : "http://#" }],
 	"description": "Lists Valid video files in a given path using ffmpeg to ensure ending of content.",
 	"main": "./vvf.js",
 	"man" : "./vvf.1.gz",
-	"bin": { "vvf": "./vvf_index.js" },
+	"bin": { "vvf": "./vvf.js", "vvf_fs" : "./vvf_fs.js"},
 	"files":
 	[
 		"install_ffmpeg.bash",
 		"HISTORY.md",
 		"README.md",
 		"vvf.1.gz",
-		"vvf.js",
-		"vvf_index.js"
+		"vvf_fs.js",
+		"vvf.js"
 	],
 	"scripts":
 	{

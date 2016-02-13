@@ -1,8 +1,15 @@
+### `0.0.3` / 2016-01-09
 
+  * added -zs option for custom seconds from end.
+  * additional audio, video info including codecs, resolution, etc.
+  * documentation clarity.
+
+
+------------------------------------------
 ### `0.0.2` / 2015-12-07
 
   * droped `date` depency which caused issues in OSX.
-  * increase acccuracy of duration reporting with new none-date approach.
+  * increase accuracy of duration reporting with new none-date approach.
   * `-q`, `-nf`, `-v`, `-x`, arguments / flags introduced for better cli use.
   * increased extensions supproted by defualt for scanning.
   * install script patched with appropriate `sudo` where required.
